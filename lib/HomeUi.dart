@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
+
 import 'UpNext.dart';
+
 class Homeui extends StatelessWidget {
   const Homeui({super.key});
 
   @override
-  Widget build(BuildContext context) {g
+  Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:  Color.fromRGBO(254, 254, 254, 1),
+      backgroundColor: Color.fromRGBO(254, 254, 254, 1),
       appBar: AppBar(
+        elevation: 0,
         backgroundColor: Color.fromRGBO(254, 254, 254, 1),
-
         title: const Text(
-          
           "Home",
           style: TextStyle(
             color: Colors.black,
@@ -37,7 +38,7 @@ class Homeui extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             // up next part
-             Padding(
+            Padding(
               padding: EdgeInsets.all(15),
               child: Row(
                 children: [
@@ -48,17 +49,18 @@ class Homeui extends StatelessWidget {
                   SizedBox(
                     width: 10,
                   ),
-                IconButton(
+                  IconButton(
                       onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=> UpNext()),
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => UpNext()),
                         );
                       },
-                      icon:  Icon(
+                      icon: Icon(
                         Icons.arrow_forward_ios,
                         size: 22,
                         color: Colors.grey,
                       )),
-
                 ],
               ),
             ),
@@ -260,7 +262,7 @@ class Homeui extends StatelessWidget {
                   ),
                   IconButton(
                       onPressed: () {},
-                      icon:  Icon(
+                      icon: Icon(
                         Icons.arrow_right,
                         size: 34,
                         color: Colors.black54,
@@ -277,7 +279,7 @@ class Homeui extends StatelessWidget {
             ),
 
             // *********************************************
-           //listview 2
+            //listview 2
             SizedBox(
               height: 250,
               child: ListView(
